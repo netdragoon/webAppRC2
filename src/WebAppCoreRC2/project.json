@@ -42,7 +42,8 @@
     "jQuery": "2.2.3",
     "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.3",
     "Microsoft.jQuery.Unobtrusive.Validation": "3.2.3",
-    "Modernizr": "2.8.3"
+    "Modernizr": "2.8.3",
+    "Canducci.Helpers": "1.0.0-*"
   },
 
   "tools": {

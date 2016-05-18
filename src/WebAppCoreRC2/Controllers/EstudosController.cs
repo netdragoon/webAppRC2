@@ -10,7 +10,7 @@ namespace WebAppCoreRC2.Controllers
     public class EstudosController : Controller
     {
         public IActionResult Index()
-        {   
+        {               
             return View();
         }
     }
