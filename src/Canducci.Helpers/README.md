@@ -34,3 +34,55 @@ ___How to?___
   
 </form>
 ```
+
+###RadioButtonList
+__How To?__
+```csharp
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <input asp-for="Id" type="hidden" />
+        <h4>Pessoa</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Nome" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Status" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <radio-button-list radio-button-asp-for="Status"></radio-button-list>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>        
+</form>
+```
+__Code__
+```
+protected void AddViewData()
+  {
+      var items = new object[]
+      {
+          new { Id = 1 , Name = "Ativo" },
+          new { Id = 2 , Name = "Inativo" },
+          new { Id = 3 , Name = "Bloqueado" }
+      };
+      ViewData["Status"] = new RadioButtonList(items, "Id", "Name");
+  }
+
+  [HttpGet()]
+  public IActionResult Edit(int id)
+  {
+      Pessoa p = new Pessoa() { Id = 1, Nome = "People", Status = 1 };
+      AddViewData();
+      return View(p);
+  }
+```
