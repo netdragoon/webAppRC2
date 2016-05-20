@@ -88,9 +88,11 @@ protected void AddViewData()
   {
       var items = new object[]
       {
-          new { Id = 1 , Name = "Ativo" },
-          new { Id = 2 , Name = "Inativo" },
-          new { Id = 3 , Name = "Bloqueado" }
+          new { Id = 1 , Name = "Branco" },
+          new { Id = 2 , Name = "Azul" },
+          new { Id = 3 , Name = "Verde" },
+          new { Id = 3 , Name = "Marron" },
+          new { Id = 3 , Name = "Vermelho" }
       };
       ViewData["Status"] = new RadioButtonList(items, "Id", "Name");
   }
