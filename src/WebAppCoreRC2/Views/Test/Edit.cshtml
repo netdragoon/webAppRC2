@@ -1,0 +1,61 @@
+@model WebAppCoreRC2.Models.Pessoa
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link href="~/css/app.min.css" rel="stylesheet" />
+    <script src="~/js/app.min.js"></script>
+    <link href="~/skins/square/blue.css" rel="stylesheet" />
+</head>
+<body>
+    <form asp-action="Edit">
+        <div class="form-horizontal">
+            <input asp-for="Id" type="hidden" />
+            <h4>Pessoa</h4>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    @*<input asp-for="Status" class="form-control" />
+                        <span asp-validation-for="Status" class="text-danger" />*@
+                    <radio-button-list radio-button-asp-for="Status"></radio-button-list>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>        
+    </form>
+    <radio-button-list radio-button-name="StatusSuper"></radio-button-list>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+    <div>
+        <h2>Radio</h2>
+        <input type="radio"  />
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('input[type=radio]').iCheck({
+                checkboxClass: 'icheckbox_square-blue',
+                radioClass: 'iradio_square-blue'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -24,7 +24,7 @@ namespace Canducci.Helpers
         #region Property
         public string DataValueField { get; private set; }
         public string DataLabelField { get; private set; }
-        public object SelectedValue { get; private set; }
+        public object SelectedValue { get; set; }
         public IEnumerable Items { get; private set; }
         #endregion Property
 
@@ -38,5 +38,6 @@ namespace Canducci.Helpers
             return new RadioButtonList(items, dataValueField, selectedValue);
         }
         #endregion FabricRadioButtonList
+        
     }
 }

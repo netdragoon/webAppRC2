@@ -50,7 +50,8 @@ var myPaths = {
         webroot + "lib/jquery-validation/dist/jquery.validate.js",
         webroot + "lib/jquery-validation/dist/additional-methods.js",
         webroot + "lib/jquery-validation-unobtrusive/*.js",
-        webroot + "lib/bootstrap/**/*.js"
+        webroot + "lib/bootstrap/**/*.js",
+        webroot + "lib/icheck/*.js"
     ],
     css: [
         webroot + "lib/bootstrap/**/*.css",
