@@ -10,7 +10,7 @@ PM> Install-Package CanducciHtmlMvcHelpersCoreRC2Final
 ###Button Simply or Bootstrap Style
 
 ___How to?___
-
+```
 <form method="post">
 
   <button-submit button-label="Gravar" button-css="p" button-style="Default"></button-submit>
@@ -32,3 +32,4 @@ ___How to?___
       <button-submit button-glyphicon="Bold" button-label="Negrito" button-style="Primary" button-size="Default"></button-submit>
   </div>    
 </form>
+```
