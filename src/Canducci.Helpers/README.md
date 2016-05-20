@@ -7,6 +7,13 @@
 ```Csharp
 PM> Install-Package CanducciHtmlMvcHelpersCoreRC2Final
 ```
+
+__Add Line in__ `_ViewImports.cshtml`
+
+```
+@addTagHelper *, Canducci.Helpers
+```
+
 ###Button Simply or Bootstrap Style
 
 ___How to?___
