@@ -1,6 +1,6 @@
 {
-  "title": "Canducci Helpers Core",
-  "description": "Canducci Helpers Core",
+  "title": "Canducci Helpers Core RC2 Final",
+  "description": "Canducci Helpers Core RC2 Final",
   "version": "1.0.0-*",
   "dependencies": {
     "NETStandard.Library": "1.5.0-rc2-24027",

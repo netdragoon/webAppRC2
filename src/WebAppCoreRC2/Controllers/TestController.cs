@@ -36,7 +36,7 @@ namespace WebAppCoreRC2.Controllers
         [HttpGet()]
         public IActionResult Edit(int id)
         {
-            Pessoa p = new Pessoa() { Id = 1, Nome = "Fulvio", Status = 1 };
+            Pessoa p = new Pessoa() { Id = 1, Nome = "People", Status = 1 };
             AddViewData();
             return View(p);
         }
